@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-screenplay: 'Courier Prime', Courier, monospace;
+    --font-ui: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-ui);
+  }
+}
+
+.font-screenplay {
+  font-family: 'Courier Prime', Courier, monospace;
+  font-size: 12pt;
+  line-height: 1.0;
+  letter-spacing: 0;
+}
+
+.screenplay-input {
+  field-sizing: content;
+  min-height: 1.4em;
+  resize: none;
+  overflow: hidden;
+}
+
+/* Screenplay page printing */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .screenplay-page {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 1in 1in 1in 1.5in !important;
+    page-break-after: always;
+    page-break-inside: avoid;
+    width: 8.5in !important;
+    min-height: 11in !important;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.4);
+}
