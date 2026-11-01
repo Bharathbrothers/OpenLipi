@@ -1,0 +1,6 @@
+{
+  "name": "OpenScript Studio",
+  "description": "Open-source collaborative screenplay writing software with industry-standard formatting, real-time co-authoring, and PDF, Word, Fountain, and Final Draft export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
